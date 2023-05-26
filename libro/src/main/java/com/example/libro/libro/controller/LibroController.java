@@ -21,7 +21,7 @@ public class LibroController {
     LibroRepository repository;
 
     @CrossOrigin
-	@GetMapping(value = "/grupo/{idGrupo}/estudiantes", produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value = "/Libro", produces = MediaType.APPLICATION_JSON_VALUE)
 	public  ResponseEntity<String> getLibros(  @PathVariable Long idGrupo  ) throws Exception{
 		Libro libros = repository.findById((long) idGrupo).get();
 		List<Libro>estudiantes = Libro();
